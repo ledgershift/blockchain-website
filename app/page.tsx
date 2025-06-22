@@ -670,7 +670,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid gap-8 lg:grid-cols-3">
-              <Card className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
+              <Card className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 border-blue-400/30 hover:border-blue-300/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/20">
                 <CardHeader>
                   <Badge className="w-fit bg-blue-500/10 text-blue-400 border-blue-500/20">DeFi Platform</Badge>
                   <CardTitle className="text-white">$50M+ TVL DeFi Protocol</CardTitle>
@@ -704,7 +704,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
+              <Card className="bg-gradient-to-br from-purple-900/30 to-indigo-900/30 border-purple-400/30 hover:border-purple-300/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/20">
                 <CardHeader>
                   <Badge className="w-fit bg-purple-500/10 text-purple-400 border-purple-500/20">Enterprise</Badge>
                   <CardTitle className="text-white">Supply Chain Transparency</CardTitle>
@@ -738,7 +738,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
+              <Card className="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border-emerald-400/30 hover:border-emerald-300/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/20">
                 <CardHeader>
                   <Badge className="w-fit bg-cyan-500/10 text-cyan-400 border-cyan-500/20">NFT Platform</Badge>
                   <CardTitle className="text-white">Gaming NFT Marketplace</CardTitle>
@@ -1009,31 +1009,52 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <Card className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border-blue-500/20">
+                <Card className="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border-indigo-400/30 shadow-xl">
                   <CardContent className="p-6">
-                    <h4 className="font-bold text-white mb-4">Why Choose Us?</h4>
+                    <div className="flex items-center mb-4">
+                      <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                        <Star className="h-4 w-4 text-white" />
+                      </div>
+                      <h4 className="font-bold text-white text-lg">Why Choose BlockchainPro?</h4>
+                    </div>
                     <ul className="space-y-3 text-sm">
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                        500+ successful blockchain projects
+                      <li className="flex items-center text-gray-200">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-3 flex-shrink-0" />
+                        500+ successful blockchain projects delivered
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                        Expert team of 50+ blockchain developers
+                      <li className="flex items-center text-gray-200">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-3 flex-shrink-0" />
+                        Expert team of 50+ certified blockchain developers
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                        24/7 support and maintenance
+                      <li className="flex items-center text-gray-200">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-3 flex-shrink-0" />
+                        24/7 dedicated support and maintenance
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                        99.9% uptime guarantee
+                      <li className="flex items-center text-gray-200">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-3 flex-shrink-0" />
+                        99.9% uptime guarantee with enterprise SLA
                       </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
-                        Security-first development approach
+                      <li className="flex items-center text-gray-200">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-3 flex-shrink-0" />
+                        Security-first development with comprehensive audits
+                      </li>
+                      <li className="flex items-center text-gray-200">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-3 flex-shrink-0" />
+                        Proven track record with Fortune 500 companies
                       </li>
                     </ul>
+                    <div className="mt-6 p-4 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-lg border border-indigo-400/20">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-indigo-300 font-medium">Client Satisfaction</span>
+                        <span className="text-emerald-400 font-bold">98.5%</span>
+                      </div>
+                      <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
+                        <div
+                          className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full"
+                          style={{ width: "98.5%" }}
+                        ></div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
