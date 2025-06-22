@@ -735,28 +735,28 @@ export default function HomePage() {
             </div>
 
             <div className="grid gap-6 md:gap-8 lg:grid-cols-3">
-              <Card className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 border-blue-400/30 hover:border-blue-300/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/20">
+              <Card className="bg-gradient-to-br from-slate-800 to-slate-900 border-slate-600 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/20">
                 <CardHeader className="p-4 md:p-6">
-                  <Badge className="w-fit bg-blue-500/10 text-blue-400 border-blue-500/20 text-xs md:text-sm">
+                  <Badge className="w-fit bg-blue-600/20 text-blue-300 border-blue-500/30 text-xs md:text-sm font-semibold">
                     DeFi Platform
                   </Badge>
-                  <CardTitle className="text-white text-lg md:text-xl">$50M+ TVL DeFi Protocol</CardTitle>
-                  <CardDescription className="text-gray-400 text-sm md:text-base">
+                  <CardTitle className="text-white text-lg md:text-xl font-bold">$50M+ TVL DeFi Protocol</CardTitle>
+                  <CardDescription className="text-slate-300 text-sm md:text-base leading-relaxed">
                     Built a complete DeFi ecosystem on Ethereum with automated yield farming and governance features.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="p-4 md:p-6 pt-0">
                   <div className="flex justify-between items-center text-xs md:text-sm mb-2">
-                    <span className="text-gray-400">Technology:</span>
-                    <span className="text-blue-400">Solidity, React, Node.js</span>
+                    <span className="text-slate-400 font-medium">Technology:</span>
+                    <span className="text-blue-300 font-semibold">Solidity, React, Node.js</span>
                   </div>
                   <div className="flex justify-between items-center text-xs md:text-sm mb-4">
-                    <span className="text-gray-400">Timeline:</span>
-                    <span className="text-green-400">6 months</span>
+                    <span className="text-slate-400 font-medium">Timeline:</span>
+                    <span className="text-emerald-400 font-semibold">6 months</span>
                   </div>
                   <Button
                     variant="outline"
-                    className="w-full border-2 border-blue-400/40 text-blue-300 hover:bg-blue-500/20 hover:border-blue-300/60 hover:text-blue-200 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                    className="w-full border-2 border-blue-400/50 text-blue-200 hover:bg-blue-500/20 hover:border-blue-300/70 hover:text-blue-100 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "DeFi Case Study 📊",
@@ -765,34 +765,34 @@ export default function HomePage() {
                       scrollToSection("contact")
                     }}
                   >
-                    View Details
+                    Learn More
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-purple-900/30 to-indigo-900/30 border-purple-400/30 hover:border-purple-300/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/20">
+              <Card className="bg-gradient-to-br from-slate-800 to-slate-900 border-slate-600 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/20">
                 <CardHeader className="p-4 md:p-6">
-                  <Badge className="w-fit bg-purple-500/10 text-purple-400 border-purple-500/20 text-xs md:text-sm">
+                  <Badge className="w-fit bg-purple-600/20 text-purple-300 border-purple-500/30 text-xs md:text-sm font-semibold">
                     Enterprise
                   </Badge>
-                  <CardTitle className="text-white text-lg md:text-xl">Supply Chain Transparency</CardTitle>
-                  <CardDescription className="text-gray-400 text-sm md:text-base">
+                  <CardTitle className="text-white text-lg md:text-xl font-bold">Supply Chain Transparency</CardTitle>
+                  <CardDescription className="text-slate-300 text-sm md:text-base leading-relaxed">
                     Hyperledger Fabric solution tracking $100M+ in goods across global supply chains.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="p-4 md:p-6 pt-0">
                   <div className="flex justify-between items-center text-xs md:text-sm mb-2">
-                    <span className="text-gray-400">Technology:</span>
-                    <span className="text-purple-400">Hyperledger, Java, Docker</span>
+                    <span className="text-slate-400 font-medium">Technology:</span>
+                    <span className="text-purple-300 font-semibold">Hyperledger, Java, Docker</span>
                   </div>
                   <div className="flex justify-between items-center text-xs md:text-sm mb-4">
-                    <span className="text-gray-400">Timeline:</span>
-                    <span className="text-green-400">8 months</span>
+                    <span className="text-slate-400 font-medium">Timeline:</span>
+                    <span className="text-emerald-400 font-semibold">8 months</span>
                   </div>
                   <Button
                     variant="outline"
-                    className="w-full border-2 border-purple-400/40 text-purple-300 hover:bg-purple-500/20 hover:border-purple-300/60 hover:text-purple-200 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                    className="w-full border-2 border-purple-400/50 text-purple-200 hover:bg-purple-500/20 hover:border-purple-300/70 hover:text-purple-100 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "Enterprise Case Study 🏢",
@@ -801,34 +801,34 @@ export default function HomePage() {
                       scrollToSection("contact")
                     }}
                   >
-                    View Details
+                    Learn More
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border-emerald-400/30 hover:border-emerald-300/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/20 lg:col-span-1 sm:col-span-2 lg:col-start-auto sm:col-start-1">
+              <Card className="bg-gradient-to-br from-slate-800 to-slate-900 border-slate-600 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/20 lg:col-span-1 sm:col-span-2 lg:col-start-auto sm:col-start-1">
                 <CardHeader className="p-4 md:p-6">
-                  <Badge className="w-fit bg-cyan-500/10 text-cyan-400 border-cyan-500/20 text-xs md:text-sm">
+                  <Badge className="w-fit bg-emerald-600/20 text-emerald-300 border-emerald-500/30 text-xs md:text-sm font-semibold">
                     NFT Platform
                   </Badge>
-                  <CardTitle className="text-white text-lg md:text-xl">Gaming NFT Marketplace</CardTitle>
-                  <CardDescription className="text-gray-400 text-sm md:text-base">
+                  <CardTitle className="text-white text-lg md:text-xl font-bold">Gaming NFT Marketplace</CardTitle>
+                  <CardDescription className="text-slate-300 text-sm md:text-base leading-relaxed">
                     High-performance NFT marketplace on Solana with 10,000+ daily active users.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="p-4 md:p-6 pt-0">
                   <div className="flex justify-between items-center text-xs md:text-sm mb-2">
-                    <span className="text-gray-400">Technology:</span>
-                    <span className="text-cyan-400">Rust, Solana, React</span>
+                    <span className="text-slate-400 font-medium">Technology:</span>
+                    <span className="text-emerald-300 font-semibold">Rust, Solana, React</span>
                   </div>
                   <div className="flex justify-between items-center text-xs md:text-sm mb-4">
-                    <span className="text-gray-400">Timeline:</span>
-                    <span className="text-green-400">4 months</span>
+                    <span className="text-slate-400 font-medium">Timeline:</span>
+                    <span className="text-emerald-400 font-semibold">4 months</span>
                   </div>
                   <Button
                     variant="outline"
-                    className="w-full border-2 border-cyan-400/40 text-cyan-300 hover:bg-cyan-500/20 hover:border-cyan-300/60 hover:text-cyan-200 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                    className="w-full border-2 border-emerald-400/50 text-emerald-200 hover:bg-emerald-500/20 hover:border-emerald-300/70 hover:text-emerald-100 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "NFT Case Study 🎮",
@@ -837,7 +837,7 @@ export default function HomePage() {
                       scrollToSection("contact")
                     }}
                   >
-                    View Details
+                    Learn More
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
@@ -861,32 +861,29 @@ export default function HomePage() {
               {[
                 {
                   name: "Sarah Johnson",
-                  role: "CTO, FinTech Innovations",
+                  role: "CTO, FinTech Company",
                   content:
                     "BlockchainPro delivered our DeFi platform ahead of schedule. Their expertise in Solidity and smart contract security is unmatched.",
                   rating: 5,
-                  company: "FinTech Innovations",
                 },
                 {
                   name: "Michael Chen",
-                  role: "CEO, Supply Chain Solutions",
+                  role: "CEO, Supply Chain Company",
                   content:
                     "The Hyperledger Fabric solution they built transformed our supply chain visibility. ROI was achieved within 6 months.",
                   rating: 5,
-                  company: "Supply Chain Solutions",
                 },
                 {
                   name: "Emily Rodriguez",
-                  role: "Founder, NFT Gaming Studio",
+                  role: "Founder, Gaming Studio",
                   content:
                     "Their Solana-based NFT marketplace handles thousands of transactions daily with zero downtime. Exceptional work!",
                   rating: 5,
-                  company: "NFT Gaming Studio",
                 },
               ].map((testimonial, index) => (
                 <Card
                   key={index}
-                  className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-700 hover:border-yellow-500/50 transition-all duration-300 hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800 to-slate-900 border-slate-600 hover:border-yellow-400/50 transition-all duration-300 hover:scale-105"
                 >
                   <CardContent className="p-4 md:p-6">
                     <div className="flex mb-3 md:mb-4">
@@ -894,26 +891,12 @@ export default function HomePage() {
                         <Star key={i} className="h-4 w-4 md:h-5 md:w-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-300 mb-3 md:mb-4 italic text-sm md:text-base">"{testimonial.content}"</p>
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
-                      <div>
-                        <p className="font-semibold text-white text-sm md:text-base">{testimonial.name}</p>
-                        <p className="text-xs md:text-sm text-gray-400">{testimonial.role}</p>
-                      </div>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="border-2 border-gray-500 text-gray-300 hover:bg-gray-700 hover:text-white hover:border-gray-400 font-medium shadow-md hover:shadow-lg transition-all duration-300 w-full sm:w-auto"
-                        onClick={() => {
-                          toast({
-                            title: `Reference from ${testimonial.company} ⭐`,
-                            description: "Want to speak with our clients? We can arrange a reference call!",
-                          })
-                          scrollToSection("contact")
-                        }}
-                      >
-                        Contact Reference
-                      </Button>
+                    <p className="text-slate-200 mb-3 md:mb-4 italic text-sm md:text-base leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+                    <div>
+                      <p className="font-semibold text-white text-sm md:text-base">{testimonial.name}</p>
+                      <p className="text-xs md:text-sm text-slate-400">{testimonial.role}</p>
                     </div>
                   </CardContent>
                 </Card>
