@@ -160,9 +160,9 @@ export default function HomePage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-white text-gray-900">
+    <div className="flex flex-col min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="px-4 lg:px-6 h-14 md:h-16 flex items-center border-b border-gray-200 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
+      <header className="px-4 lg:px-6 h-14 md:h-16 flex items-center border-b border-gray-800 bg-black/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="flex items-center justify-center cursor-pointer" onClick={() => scrollToSection("hero")}>
           <div className="relative">
             <Shield className="h-6 w-6 md:h-8 md:w-8 text-blue-500" />
@@ -176,25 +176,25 @@ export default function HomePage() {
         {/* Desktop Navigation */}
         <nav className="ml-auto hidden md:flex gap-6 lg:gap-8">
           <button
-            className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200"
             onClick={() => scrollToSection("services")}
           >
             Services
           </button>
           <button
-            className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200"
             onClick={() => scrollToSection("technologies")}
           >
             Technologies
           </button>
           <button
-            className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200"
             onClick={() => scrollToSection("portfolio")}
           >
             Portfolio
           </button>
           <button
-            className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200"
             onClick={() => scrollToSection("contact")}
           >
             Contact
@@ -203,33 +203,33 @@ export default function HomePage() {
 
         {/* Mobile Menu Button */}
         <button className="ml-auto md:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          {mobileMenuOpen ? <X className="h-5 w-5 text-gray-900" /> : <Menu className="h-5 w-5 text-gray-900" />}
+          {mobileMenuOpen ? <X className="h-5 w-5 text-white" /> : <Menu className="h-5 w-5 text-white" />}
         </button>
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 md:hidden">
+          <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm border-b border-gray-800 md:hidden">
             <nav className="flex flex-col p-4 space-y-4">
               <button
-                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 text-left"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 text-left"
                 onClick={() => scrollToSection("services")}
               >
                 Services
               </button>
               <button
-                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 text-left"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 text-left"
                 onClick={() => scrollToSection("technologies")}
               >
                 Technologies
               </button>
               <button
-                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 text-left"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 text-left"
                 onClick={() => scrollToSection("portfolio")}
               >
                 Portfolio
               </button>
               <button
-                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 text-left"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 text-left"
                 onClick={() => scrollToSection("contact")}
               >
                 Contact
@@ -242,7 +242,7 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section id="hero" className="relative w-full py-12 md:py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-gray-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]"></div>
           <div className="container px-4 md:px-6 mx-auto relative z-10">
             <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
@@ -259,7 +259,7 @@ export default function HomePage() {
                     Next-Gen Blockchain Solutions
                   </span>
                 </h1>
-                <p className="mx-auto max-w-[90%] md:max-w-[800px] text-gray-600 text-base md:text-lg lg:text-xl leading-relaxed px-2">
+                <p className="mx-auto max-w-[90%] md:max-w-[800px] text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed px-2">
                   We deliver enterprise-grade blockchain solutions across Ethereum, Polygon, Solana, Hyperledger Fabric,
                   and R3 Corda. From smart contracts to complete DeFi ecosystems, we build the future of decentralized
                   technology.
@@ -268,7 +268,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg sm:max-w-none justify-center">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-gray-900 font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={handleStartProject}
                 >
                   Start Your Project
@@ -277,7 +277,7 @@ export default function HomePage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-gray-900 hover:border-gray-400 font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="border-2 border-gray-300 text-white hover:bg-gray-100 hover:text-gray-900 hover:border-gray-400 font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={handleViewCaseStudies}
                 >
                   View Case Studies
@@ -309,7 +309,7 @@ export default function HomePage() {
         </section>
 
         {/* Technologies Section */}
-        <section id="technologies" className="w-full py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white">
+        <section id="technologies" className="w-full py-12 md:py-20 bg-gradient-to-b from-gray-900/50 to-black">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -330,7 +330,7 @@ export default function HomePage() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 <Card
-                  className="bg-white border-gray-200 shadow-lg hover:border-blue-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                  className="bg-gray-900/50 border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
                   onClick={() => {
                     toast({
                       title: "Ethereum Development 🔷",
@@ -343,14 +343,14 @@ export default function HomePage() {
                     <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                       <Globe className="h-6 w-6 md:h-8 md:w-8 text-gray-900" />
                     </div>
-                    <CardTitle className="text-gray-900 text-lg md:text-xl">Ethereum</CardTitle>
-                    <CardDescription className="text-gray-600 text-sm md:text-base">
+                    <CardTitle className="text-white text-lg md:text-xl">Ethereum</CardTitle>
+                    <CardDescription className="text-gray-400 text-sm md:text-base">
                       The world's leading smart contract platform with robust DeFi ecosystem
                     </CardDescription>
                   </CardHeader>
                 </Card>
                 <Card
-                  className="bg-white border-gray-200 shadow-lg hover:border-purple-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                  className="bg-gray-900/50 border-gray-700 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
                   onClick={() => {
                     toast({
                       title: "Polygon Development 🟣",
@@ -363,14 +363,14 @@ export default function HomePage() {
                     <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
                       <Zap className="h-6 w-6 md:h-8 md:w-8 text-gray-900" />
                     </div>
-                    <CardTitle className="text-gray-900 text-lg md:text-xl">Polygon</CardTitle>
-                    <CardDescription className="text-gray-600 text-sm md:text-base">
+                    <CardTitle className="text-white text-lg md:text-xl">Polygon</CardTitle>
+                    <CardDescription className="text-gray-400 text-sm md:text-base">
                       High-speed, low-cost Layer 2 scaling solution for Ethereum
                     </CardDescription>
                   </CardHeader>
                 </Card>
                 <Card
-                  className="bg-white border-gray-200 shadow-lg hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 cursor-pointer sm:col-span-2 lg:col-span-1"
+                  className="bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 cursor-pointer sm:col-span-2 lg:col-span-1"
                   onClick={() => {
                     toast({
                       title: "Solana Development ⚡",
@@ -383,8 +383,8 @@ export default function HomePage() {
                     <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
                       <Rocket className="h-6 w-6 md:h-8 md:w-8 text-gray-900" />
                     </div>
-                    <CardTitle className="text-gray-900 text-lg md:text-xl">Solana</CardTitle>
-                    <CardDescription className="text-gray-600 text-sm md:text-base">
+                    <CardTitle className="text-white text-lg md:text-xl">Solana</CardTitle>
+                    <CardDescription className="text-gray-400 text-sm md:text-base">
                       Ultra-fast blockchain with sub-second finality and low fees
                     </CardDescription>
                   </CardHeader>
@@ -399,7 +399,7 @@ export default function HomePage() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
                 <Card
-                  className="bg-white border-gray-200 shadow-lg hover:border-green-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                  className="bg-gray-900/50 border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
                   onClick={() => {
                     toast({
                       title: "Hyperledger Fabric 🏢",
@@ -412,14 +412,14 @@ export default function HomePage() {
                     <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
                       <Lock className="h-6 w-6 md:h-8 md:w-8 text-gray-900" />
                     </div>
-                    <CardTitle className="text-gray-900 text-lg md:text-xl">Hyperledger Fabric</CardTitle>
-                    <CardDescription className="text-gray-600 text-sm md:text-base">
+                    <CardTitle className="text-white text-lg md:text-xl">Hyperledger Fabric</CardTitle>
+                    <CardDescription className="text-gray-400 text-sm md:text-base">
                       Enterprise-grade permissioned blockchain framework for business networks
                     </CardDescription>
                   </CardHeader>
                 </Card>
                 <Card
-                  className="bg-white border-gray-200 shadow-lg hover:border-orange-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                  className="bg-gray-900/50 border-gray-700 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 cursor-pointer"
                   onClick={() => {
                     toast({
                       title: "R3 Corda 🏦",
@@ -432,8 +432,8 @@ export default function HomePage() {
                     <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center">
                       <Database className="h-6 w-6 md:h-8 md:w-8 text-gray-900" />
                     </div>
-                    <CardTitle className="text-gray-900 text-lg md:text-xl">R3 Corda</CardTitle>
-                    <CardDescription className="text-gray-600 text-sm md:text-base">
+                    <CardTitle className="text-white text-lg md:text-xl">R3 Corda</CardTitle>
+                    <CardDescription className="text-gray-400 text-sm md:text-base">
                       Distributed ledger platform designed for financial services and regulated industries
                     </CardDescription>
                   </CardHeader>
@@ -456,7 +456,7 @@ export default function HomePage() {
                 ].map((lang, index) => (
                   <Card
                     key={index}
-                    className="bg-white border-gray-200 shadow-lg hover:border-gray-500 transition-all duration-300 hover:scale-105 cursor-pointer"
+                    className="bg-gray-900/50 border-gray-700 hover:border-gray-500 transition-all duration-300 hover:scale-105 cursor-pointer"
                     onClick={() => {
                       toast({
                         title: `${lang.name} Development 💻`,
@@ -471,7 +471,7 @@ export default function HomePage() {
                       >
                         <Code className="h-4 w-4 md:h-6 md:w-6 text-gray-900" />
                       </div>
-                      <p className="font-semibold text-gray-900 text-sm md:text-base">{lang.name}</p>
+                      <p className="font-semibold text-white text-sm md:text-base">{lang.name}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -495,13 +495,13 @@ export default function HomePage() {
             </div>
 
             <div className="grid gap-6 md:gap-8 lg:grid-cols-3">
-              <Card className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-200 shadow-lg hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
                 <CardHeader className="p-4 md:p-6">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-3 md:mb-4">
                     <Code className="h-5 w-5 md:h-6 md:w-6 text-gray-900" />
                   </div>
-                  <CardTitle className="text-gray-900 text-lg md:text-xl">Smart Contract Development</CardTitle>
-                  <CardDescription className="text-gray-600 text-sm md:text-base">
+                  <CardTitle className="text-white text-lg md:text-xl">Smart Contract Development</CardTitle>
+                  <CardDescription className="text-gray-400 text-sm md:text-base">
                     Secure, audited smart contracts built with industry best practices using Solidity, Rust, and more.
                   </CardDescription>
                 </CardHeader>
@@ -525,7 +525,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button
-                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-gray-900 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "Smart Contract Services 📝",
@@ -540,13 +540,13 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-200 shadow-lg hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
                 <CardHeader className="p-4 md:p-6">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-3 md:mb-4">
                     <TrendingUp className="h-5 w-5 md:h-6 md:w-6 text-gray-900" />
                   </div>
-                  <CardTitle className="text-gray-900 text-lg md:text-xl">DeFi Platform Development</CardTitle>
-                  <CardDescription className="text-gray-600 text-sm md:text-base">
+                  <CardTitle className="text-white text-lg md:text-xl">DeFi Platform Development</CardTitle>
+                  <CardDescription className="text-gray-400 text-sm md:text-base">
                     Complete DeFi ecosystems including DEXs, lending protocols, yield farming, and staking platforms.
                   </CardDescription>
                 </CardHeader>
@@ -570,7 +570,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button
-                    className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-gray-900 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "DeFi Development 🏦",
@@ -585,13 +585,13 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-200 shadow-lg hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
                 <CardHeader className="p-4 md:p-6">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-3 md:mb-4">
                     <Award className="h-5 w-5 md:h-6 md:w-6 text-gray-900" />
                   </div>
-                  <CardTitle className="text-gray-900 text-lg md:text-xl">NFT Ecosystem Development</CardTitle>
-                  <CardDescription className="text-gray-600 text-sm md:text-base">
+                  <CardTitle className="text-white text-lg md:text-xl">NFT Ecosystem Development</CardTitle>
+                  <CardDescription className="text-gray-400 text-sm md:text-base">
                     Full-stack NFT solutions including marketplaces, minting platforms, and gaming integrations.
                   </CardDescription>
                 </CardHeader>
@@ -615,7 +615,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button
-                    className="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-gray-900 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "NFT Development 🎨",
@@ -633,13 +633,13 @@ export default function HomePage() {
 
             {/* Additional Services Row */}
             <div className="grid gap-6 md:gap-8 lg:grid-cols-2 mt-8 md:mt-12">
-              <Card className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg hover:border-green-500/50 transition-all duration-300">
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-200 shadow-lg hover:border-green-500/50 transition-all duration-300">
                 <CardHeader className="p-4 md:p-6">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-3 md:mb-4">
                     <Lock className="h-5 w-5 md:h-6 md:w-6 text-gray-900" />
                   </div>
-                  <CardTitle className="text-gray-900 text-lg md:text-xl">Enterprise Blockchain Solutions</CardTitle>
-                  <CardDescription className="text-gray-600 text-sm md:text-base">
+                  <CardTitle className="text-white text-lg md:text-xl">Enterprise Blockchain Solutions</CardTitle>
+                  <CardDescription className="text-gray-400 text-sm md:text-base">
                     Private blockchain networks using Hyperledger Fabric and R3 Corda for enterprise applications.
                   </CardDescription>
                 </CardHeader>
@@ -660,14 +660,14 @@ export default function HomePage() {
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button
-                      className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-gray-900 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                      className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                       onClick={handleScheduleConsultation}
                     >
                       Schedule Consultation
                     </Button>
                     <Button
                       variant="outline"
-                      className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-gray-900 hover:border-gray-400 shadow-md hover:shadow-lg transition-all duration-300"
+                      className="border-2 border-gray-300 text-white hover:bg-gray-100 hover:text-gray-900 hover:border-gray-400 shadow-md hover:shadow-lg transition-all duration-300"
                       onClick={handleDownloadWhitepaper}
                     >
                       <Download className="h-4 w-4" />
@@ -676,13 +676,13 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg hover:border-orange-500/50 transition-all duration-300">
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-200 shadow-lg hover:border-orange-500/50 transition-all duration-300">
                 <CardHeader className="p-4 md:p-6">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-3 md:mb-4">
                     <Users className="h-5 w-5 md:h-6 md:w-6 text-gray-900" />
                   </div>
-                  <CardTitle className="text-gray-900 text-lg md:text-xl">Blockchain Consulting & Strategy</CardTitle>
-                  <CardDescription className="text-gray-600 text-sm md:text-base">
+                  <CardTitle className="text-white text-lg md:text-xl">Blockchain Consulting & Strategy</CardTitle>
+                  <CardDescription className="text-gray-400 text-sm md:text-base">
                     Strategic guidance for blockchain adoption, tokenomics design, and digital transformation.
                   </CardDescription>
                 </CardHeader>
@@ -702,7 +702,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-gray-900 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "Blockchain Consulting 🎯",
@@ -721,7 +721,7 @@ export default function HomePage() {
         </section>
 
         {/* Portfolio/Case Studies Section */}
-        <section id="portfolio" className="w-full py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white">
+        <section id="portfolio" className="w-full py-12 md:py-20 bg-gradient-to-b from-gray-900/50 to-black">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -735,13 +735,13 @@ export default function HomePage() {
             </div>
 
             <div className="grid gap-6 md:gap-8 lg:grid-cols-3">
-              <Card className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg hover:border-blue-400/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/20">
+              <Card className="bg-gradient-to-br from-slate-800 to-slate-900 border-slate-600 shadow-lg hover:border-blue-400/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/20">
                 <CardHeader className="p-4 md:p-6">
                   <Badge className="w-fit bg-blue-600/20 text-blue-300 border-blue-500/30 text-xs md:text-sm font-semibold">
                     DeFi Platform
                   </Badge>
-                  <CardTitle className="text-gray-900 text-lg md:text-xl font-bold">$50M+ TVL DeFi Protocol</CardTitle>
-                  <CardDescription className="text-gray-600 text-sm md:text-base leading-relaxed">
+                  <CardTitle className="text-white text-lg md:text-xl font-bold">$50M+ TVL DeFi Protocol</CardTitle>
+                  <CardDescription className="text-gray-400 text-sm md:text-base leading-relaxed">
                     Built a complete DeFi ecosystem on Ethereum with automated yield farming and governance features.
                   </CardDescription>
                 </CardHeader>
@@ -771,15 +771,13 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg hover:border-purple-400/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/20">
+              <Card className="bg-gradient-to-br from-slate-800 to-slate-900 border-slate-600 shadow-lg hover:border-purple-400/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/20">
                 <CardHeader className="p-4 md:p-6">
                   <Badge className="w-fit bg-purple-600/20 text-purple-300 border-purple-500/30 text-xs md:text-sm font-semibold">
                     Enterprise
                   </Badge>
-                  <CardTitle className="text-gray-900 text-lg md:text-xl font-bold">
-                    Supply Chain Transparency
-                  </CardTitle>
-                  <CardDescription className="text-gray-600 text-sm md:text-base leading-relaxed">
+                  <CardTitle className="text-white text-lg md:text-xl font-bold">Supply Chain Transparency</CardTitle>
+                  <CardDescription className="text-gray-400 text-sm md:text-base leading-relaxed">
                     Hyperledger Fabric solution tracking $100M+ in goods across global supply chains.
                   </CardDescription>
                 </CardHeader>
@@ -809,13 +807,13 @@ export default function HomePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/20 lg:col-span-1 sm:col-span-2 lg:col-start-auto sm:col-start-1">
+              <Card className="bg-gradient-to-br from-slate-800 to-slate-900 border-slate-600 shadow-lg hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/20 lg:col-span-1 sm:col-span-2 lg:col-start-auto sm:col-start-1">
                 <CardHeader className="p-4 md:p-6">
                   <Badge className="w-fit bg-emerald-600/20 text-emerald-300 border-emerald-500/30 text-xs md:text-sm font-semibold">
                     NFT Platform
                   </Badge>
-                  <CardTitle className="text-gray-900 text-lg md:text-xl font-bold">Gaming NFT Marketplace</CardTitle>
-                  <CardDescription className="text-gray-600 text-sm md:text-base leading-relaxed">
+                  <CardTitle className="text-white text-lg md:text-xl font-bold">Gaming NFT Marketplace</CardTitle>
+                  <CardDescription className="text-gray-400 text-sm md:text-base leading-relaxed">
                     High-performance NFT marketplace on Solana with 10,000+ daily active users.
                   </CardDescription>
                 </CardHeader>
@@ -885,7 +883,7 @@ export default function HomePage() {
               ].map((testimonial, index) => (
                 <Card
                   key={index}
-                  className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg hover:border-yellow-400/50 transition-all duration-300 hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800 to-slate-900 border-gray-200 shadow-lg hover:border-yellow-400/50 transition-all duration-300 hover:scale-105"
                 >
                   <CardContent className="p-4 md:p-6">
                     <div className="flex mb-3 md:mb-4">
@@ -897,7 +895,7 @@ export default function HomePage() {
                       "{testimonial.content}"
                     </p>
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm md:text-base">{testimonial.name}</p>
+                      <p className="font-semibold text-white text-sm md:text-base">{testimonial.name}</p>
                       <p className="text-xs md:text-sm text-gray-500">{testimonial.role}</p>
                     </div>
                   </CardContent>
@@ -908,7 +906,7 @@ export default function HomePage() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="w-full py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white">
+        <section id="contact" className="w-full py-12 md:py-20 bg-gradient-to-b from-gray-900/50 to-black">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -922,9 +920,9 @@ export default function HomePage() {
             </div>
 
             <div className="grid gap-8 md:gap-12 lg:grid-cols-2 max-w-6xl mx-auto">
-              <Card className="bg-gradient-to-br from-white to-gray-50 border-gray-200 shadow-lg">
+              <Card className="bg-gradient-to-br from-gray-900 to-gray-800 border-gray-200 shadow-lg">
                 <CardHeader className="p-4 md:p-6">
-                  <CardTitle className="text-gray-900 text-xl md:text-2xl">Start Your Project Today</CardTitle>
+                  <CardTitle className="text-white text-xl md:text-2xl">Start Your Project Today</CardTitle>
                   <CardDescription className="text-gray-600 text-sm md:text-base">
                     Fill out the form and our blockchain experts will contact you within 24 hours.
                   </CardDescription>
@@ -940,7 +938,7 @@ export default function HomePage() {
                           id="firstName"
                           name="firstName"
                           placeholder="John"
-                          className="bg-white border-gray-300 text-gray-900"
+                          className="bg-gray-800 border-gray-600 text-white"
                           value={formData.firstName}
                           onChange={handleInputChange}
                           required
@@ -954,7 +952,7 @@ export default function HomePage() {
                           id="lastName"
                           name="lastName"
                           placeholder="Doe"
-                          className="bg-white border-gray-300 text-gray-900"
+                          className="bg-gray-800 border-gray-600 text-white"
                           value={formData.lastName}
                           onChange={handleInputChange}
                           required
@@ -970,7 +968,7 @@ export default function HomePage() {
                         name="email"
                         placeholder="john@company.com"
                         type="email"
-                        className="bg-white border-gray-300 text-gray-900"
+                        className="bg-gray-800 border-gray-600 text-white"
                         value={formData.email}
                         onChange={handleInputChange}
                         required
@@ -983,7 +981,7 @@ export default function HomePage() {
                       <select
                         id="projectType"
                         name="projectType"
-                        className="w-full p-3 bg-white border border-gray-300 rounded-md text-gray-900 text-sm md:text-base"
+                        className="w-full p-3 bg-gray-800 border border-gray-600 rounded-md text-white text-sm md:text-base"
                         value={formData.projectType}
                         onChange={handleInputChange}
                         required
@@ -1004,7 +1002,7 @@ export default function HomePage() {
                         id="message"
                         name="message"
                         placeholder="Tell us about your blockchain project requirements, timeline, and budget..."
-                        className="min-h-[100px] md:min-h-[120px] bg-white border-gray-300 text-gray-900 text-sm md:text-base"
+                        className="min-h-[100px] md:min-h-[120px] bg-gray-800 border-gray-600 text-white text-sm md:text-base"
                         value={formData.message}
                         onChange={handleInputChange}
                         required
@@ -1012,7 +1010,7 @@ export default function HomePage() {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-gray-900 font-bold py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                      className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -1036,7 +1034,7 @@ export default function HomePage() {
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">Get In Touch</h3>
                   <div className="space-y-4 md:space-y-6">
                     <button
-                      className="flex items-center space-x-3 md:space-x-4 w-full text-left hover:bg-gray-100 p-3 rounded-lg transition-colors"
+                      className="flex items-center space-x-3 md:space-x-4 w-full text-left hover:bg-gray-800/50 p-3 rounded-lg transition-colors"
                       onClick={() => handleContactMethod("email", "contact@blockchainpro.com")}
                     >
                       <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -1048,7 +1046,7 @@ export default function HomePage() {
                       </div>
                     </button>
                     <button
-                      className="flex items-center space-x-3 md:space-x-4 w-full text-left hover:bg-gray-100 p-3 rounded-lg transition-colors"
+                      className="flex items-center space-x-3 md:space-x-4 w-full text-left hover:bg-gray-800/50 p-3 rounded-lg transition-colors"
                       onClick={() => handleContactMethod("phone", "+1-555-123-4567")}
                     >
                       <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -1060,7 +1058,7 @@ export default function HomePage() {
                       </div>
                     </button>
                     <button
-                      className="flex items-center space-x-3 md:space-x-4 w-full text-left hover:bg-gray-100 p-3 rounded-lg transition-colors"
+                      className="flex items-center space-x-3 md:space-x-4 w-full text-left hover:bg-gray-800/50 p-3 rounded-lg transition-colors"
                       onClick={() => handleContactMethod("address", "123 Blockchain Street, Tech City, TC 12345")}
                     >
                       <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -1129,7 +1127,7 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 bg-white">
+      <footer className="border-t border-gray-800 bg-black">
         <div className="container px-4 md:px-6 mx-auto py-8 md:py-12">
           <div className="grid gap-6 md:gap-8 grid-cols-2 md:grid-cols-4">
             <div className="space-y-3 md:space-y-4 col-span-2 md:col-span-1">
@@ -1145,8 +1143,8 @@ export default function HomePage() {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-3 md:mb-4 text-sm md:text-base">Services</h4>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-gray-600">
+              <h4 className="font-semibold text-white mb-3 md:mb-4 text-sm md:text-base">Services</h4>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-gray-400">
                 <li>
                   <button className="hover:text-blue-400 transition-colors" onClick={() => scrollToSection("services")}>
                     Smart Contracts
@@ -1170,8 +1168,8 @@ export default function HomePage() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-3 md:mb-4 text-sm md:text-base">Technologies</h4>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-gray-600">
+              <h4 className="font-semibold text-white mb-3 md:mb-4 text-sm md:text-base">Technologies</h4>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-gray-400">
                 <li>
                   <button
                     className="hover:text-blue-400 transition-colors"
@@ -1207,8 +1205,8 @@ export default function HomePage() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-3 md:mb-4 text-sm md:text-base">Company</h4>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-gray-600">
+              <h4 className="font-semibold text-white mb-3 md:mb-4 text-sm md:text-base">Company</h4>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-gray-400">
                 <li>
                   <button
                     className="hover:text-blue-400 transition-colors"
