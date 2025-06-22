@@ -60,16 +60,28 @@ export default function HomePage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
+    const googleFormURL =
+      "https://docs.google.com/forms/d/e/1FAIpQLSchjslxxg2ZPMAFTP5Gb6vEIZO8Ir6CZjCzttv9qEl45sz7Hg/formResponse"
+
+    const formDataToGoogle = new FormData()
+    formDataToGoogle.append("entry.1935665057", formData.firstName)
+    formDataToGoogle.append("entry.1861435192", formData.lastName)
+    formDataToGoogle.append("entry.1381533975", formData.email)
+    formDataToGoogle.append("entry.1726200893", formData.projectType)
+    formDataToGoogle.append("entry.98690888", formData.message)
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      await fetch(googleFormURL, {
+        method: "POST",
+        mode: "no-cors", // Google Forms doesn't support CORS
+        body: formDataToGoogle,
+      })
 
       toast({
         title: "Message Sent Successfully! 🚀",
         description: "Our blockchain experts will contact you within 24 hours.",
       })
 
-      // Reset form
       setFormData({
         firstName: "",
         lastName: "",
@@ -253,19 +265,19 @@ export default function HomePage() {
                   technology.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full max-w-md sm:max-w-none">
+              <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg sm:max-w-none justify-center">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 md:px-8 md:py-4 text-base md:text-lg w-full sm:w-auto"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={handleStartProject}
                 >
                   Start Your Project
-                  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-gray-600 text-white hover:bg-gray-800 px-6 py-3 md:px-8 md:py-4 text-base md:text-lg w-full sm:w-auto"
+                  className="border-2 border-gray-400 text-gray-200 hover:bg-gray-700 hover:text-white hover:border-gray-300 font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={handleViewCaseStudies}
                 >
                   View Case Studies
@@ -513,7 +525,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-sm md:text-base"
+                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "Smart Contract Services 📝",
@@ -523,7 +535,7 @@ export default function HomePage() {
                     }}
                   >
                     Get Quote
-                    <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -558,7 +570,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-sm md:text-base"
+                    className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "DeFi Development 🏦",
@@ -568,7 +580,7 @@ export default function HomePage() {
                     }}
                   >
                     Start DeFi Project
-                    <TrendingUp className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                    <TrendingUp className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -603,7 +615,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button
-                    className="w-full bg-cyan-600 hover:bg-cyan-700 text-sm md:text-base"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "NFT Development 🎨",
@@ -613,7 +625,7 @@ export default function HomePage() {
                     }}
                   >
                     Launch NFT Project
-                    <Award className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                    <Award className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -646,19 +658,19 @@ export default function HomePage() {
                       Trade finance & settlements
                     </li>
                   </ul>
-                  <div className="flex flex-col sm:flex-row gap-2">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <Button
-                      className="flex-1 bg-green-600 hover:bg-green-700 text-sm md:text-base"
+                      className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                       onClick={handleScheduleConsultation}
                     >
                       Schedule Consultation
                     </Button>
                     <Button
                       variant="outline"
-                      className="border-gray-600 text-white hover:bg-gray-800 text-sm md:text-base"
+                      className="border-2 border-gray-500 text-gray-300 hover:bg-gray-700 hover:text-white hover:border-gray-400 shadow-md hover:shadow-lg transition-all duration-300"
                       onClick={handleDownloadWhitepaper}
                     >
-                      <Download className="h-3 w-3 md:h-4 md:w-4" />
+                      <Download className="h-4 w-4" />
                     </Button>
                   </div>
                 </CardContent>
@@ -690,7 +702,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button
-                    className="w-full bg-orange-600 hover:bg-orange-700 text-sm md:text-base"
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "Blockchain Consulting 🎯",
@@ -700,7 +712,7 @@ export default function HomePage() {
                     }}
                   >
                     Book Strategy Session
-                    <Users className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                    <Users className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -744,7 +756,7 @@ export default function HomePage() {
                   </div>
                   <Button
                     variant="outline"
-                    className="w-full border-blue-500/20 text-blue-400 hover:bg-blue-500/10 text-sm md:text-base"
+                    className="w-full border-2 border-blue-400/40 text-blue-300 hover:bg-blue-500/20 hover:border-blue-300/60 hover:text-blue-200 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "DeFi Case Study 📊",
@@ -754,7 +766,7 @@ export default function HomePage() {
                     }}
                   >
                     View Details
-                    <ExternalLink className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -780,7 +792,7 @@ export default function HomePage() {
                   </div>
                   <Button
                     variant="outline"
-                    className="w-full border-purple-500/20 text-purple-400 hover:bg-purple-500/10 text-sm md:text-base"
+                    className="w-full border-2 border-purple-400/40 text-purple-300 hover:bg-purple-500/20 hover:border-purple-300/60 hover:text-purple-200 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "Enterprise Case Study 🏢",
@@ -790,7 +802,7 @@ export default function HomePage() {
                     }}
                   >
                     View Details
-                    <ExternalLink className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -816,7 +828,7 @@ export default function HomePage() {
                   </div>
                   <Button
                     variant="outline"
-                    className="w-full border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/10 text-sm md:text-base"
+                    className="w-full border-2 border-cyan-400/40 text-cyan-300 hover:bg-cyan-500/20 hover:border-cyan-300/60 hover:text-cyan-200 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => {
                       toast({
                         title: "NFT Case Study 🎮",
@@ -826,7 +838,7 @@ export default function HomePage() {
                     }}
                   >
                     View Details
-                    <ExternalLink className="ml-2 h-3 w-3 md:h-4 md:w-4" />
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -891,7 +903,7 @@ export default function HomePage() {
                       <Button
                         size="sm"
                         variant="outline"
-                        className="border-gray-600 text-gray-400 hover:bg-gray-800 text-xs md:text-sm w-full sm:w-auto"
+                        className="border-2 border-gray-500 text-gray-300 hover:bg-gray-700 hover:text-white hover:border-gray-400 font-medium shadow-md hover:shadow-lg transition-all duration-300 w-full sm:w-auto"
                         onClick={() => {
                           toast({
                             title: `Reference from ${testimonial.company} ⭐`,
@@ -1015,11 +1027,20 @@ export default function HomePage() {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 text-base md:text-lg"
+                      className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? "Sending..." : "Get Free Consultation"}
-                      {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />}
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Get Free Consultation
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </>
+                      )}
                     </Button>
                   </form>
                 </CardContent>
